@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/18 16:35:12 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/18 16:09:21 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/07/18 16:42:39 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// Std Libs Headers
-# include <stdint.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-#endif
+int	ft_isalpha(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (TRUE);
+	if (c >= 'a' && c <= 'z')
+		return (TRUE);
+	return (FALSE);
+}
