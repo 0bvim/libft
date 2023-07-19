@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:01:17 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/18 21:00:11 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:26:44 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int	ft_isalnum(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (1);
+		return (TRUE);
 	if (c >= 'a' && c <= 'z')
-		return (1);
+		return (TRUE);
 	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+		return (TRUE);
+	return (FALSE);
 }
