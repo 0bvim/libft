@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:44:04 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/18 17:59:38 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/18 21:01:32 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }
  

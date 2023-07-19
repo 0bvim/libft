@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:09:21 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/18 16:42:39 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/18 21:00:38 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_isalpha(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (TRUE);
+		return (1);
 	if (c >= 'a' && c <= 'z')
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }
