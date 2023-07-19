@@ -1,26 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/19 14:20:19 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/19 14:18:58 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/07/19 14:19:17 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// Std Libs Headers
-# include <stdint.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-// Define list
-
-# define TRUE 1
-# define FALSE 0
-
-#endif
