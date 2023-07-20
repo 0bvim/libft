@@ -6,27 +6,35 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 14:18:58 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/19 21:11:19 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/20 02:06:59 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-
 int	ft_atoi(const char *nptr)
 {
-	while (*nptr)
-	{
-		if ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
-			nptr++;
-		if (ft_isdigit(nptr) == 0)
+	int	sign;
+	int	nb;
+
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
+		nptr++; 
+	while (*nptr == '-' || *nptr == '+')
+	{	
+		sign += 1;
+		if (sign > 1)
 			return (0);
-		
+		if (*nptr == '-')
+			sign == -sign;
+		nptr++;
 	}
+	nb = 0;
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		nb *= 10;
+		nb += *nptr - 48;
+		nptr++;
+	}
+	nb *= sign;
+	return (nb);	
 }
