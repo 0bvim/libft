@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:05:16 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/19 14:29:50 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/19 21:00:47 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }
