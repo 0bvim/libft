@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 14:18:58 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/20 10:32:25 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/22 03:42:20 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
 		nptr++; 
 	while (*nptr == '-' || *nptr == '+')
-	{	
+	{
 		sign += 1;
 		if (sign > 1)
 			return (0);
@@ -37,5 +37,5 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	nb *= sign;
-	return (nb);	
+	return (nb);
 }

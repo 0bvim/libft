@@ -6,15 +6,15 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 02:01:24 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/19 14:31:09 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/22 03:41:29 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (*str++)
