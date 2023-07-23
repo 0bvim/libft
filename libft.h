@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/23 00:45:50 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/23 01:21:23 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,16 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-// parse
-size_t	ft_strlen(const char *str);
+// Functions
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
+void	*ft_memset(void *s, int c, size_t n);
+size_t	ft_strlen(const char *str);
 
 #endif

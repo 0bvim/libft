@@ -6,13 +6,13 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 02:01:24 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/22 03:41:29 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/23 01:18:54 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 
