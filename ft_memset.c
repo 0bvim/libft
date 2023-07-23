@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/23 00:45:50 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/22 23:56:15 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/07/23 00:30:25 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// Std Libs Headers
-# include <stdlib.h>
-# include <unistd.h>
+void	*ft_memset(void *s, int c, size_t n)
+{
+	unsigned char	*str;
+	unsigned char	chr;
 
-// parse
-size_t	ft_strlen(const char *str);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_atoi(const char *nptr);
-
-#endif
+	str = (unsigned char *)s;
+	chr = (unsigned char)c;
+	if (!str)
+		return (NULL);
+	while (--nbr)
+		*(str + n) = chr;
+	return (s);
+}
