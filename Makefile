@@ -10,9 +10,33 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME := libft.a
+SRCFILES := ft_atoi.c \
+	    ft_isalnum.c \
+	    ft_isalpha.c \
+	    ft_isascii.c \
+	    ft_isdigit.c \
+	    ft_isprint.c \
+	    ft_strlen.c \
+	    ft_tolower.c \
+	    ft_toupper.c
+OBJFILES := $(SRCFILES:%.c=%.o)
+CFLAGS := -Wall -Wextra -Werror -I.
 
+all: libft.a
+	
+$(NAME): $(OBJFILES)
+	ar crs $(NAME) $(OBJFILES)
+$(OBJFILES): %.o : %.c
+	$(CC) -c $< -o $@ $(CFLAGS)
 
-all:
+clean:
+	rm -f $(OBJFILES)
 
-run: echo "ola"	
-.SILENT: run:
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+	echo "Uma mensagem bonita aqui =D"
+
+.PHONY: clean fclean re all
