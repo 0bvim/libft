@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/07/24 11:08:01 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/07/24 15:41:56 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCFILES := ft_atoi.c \
 	    ft_bzero.c \
 	    ft_memcpy.c \
 	    ft_memmove.c \
-	    ft_strlcpy.c
+	    ft_strlcpy.c \
+	    ft_strlcat.c
 OBJFILES := $(SRCFILES:%.c=%.o)
 CFLAGS := -Wall -Wextra -Werror -I.
 
