@@ -1,5 +1,6 @@
 # Libft
-## This is a project that I need to do my own lib with a couple of functions of Clang, and use Makefile to compile the lib.
+## This is a project that I need to make my own lib replying function of `C`.
+## Concatenating with header file `(.h)` and using Makefile to compile lib.
 
 ### implemented functions so far:
 | Functions |  Details |
