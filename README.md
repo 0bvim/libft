@@ -17,6 +17,8 @@
 [`ft_bzero.c`](https://github.com/vinicius-f-pereira/42_libft/blob/main/ft_bzero.c) | The bzero() function erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.
 [`ft_memcpy.c`](https://github.com/vinicius-f-pereira/42_libft/blob/main/ft_memcpy.c) | The memcpy() function copies n bytes from memory area src to memory area dest. The memory areas must not overlap. `Use memmove(3) if the memory areas do overlap.`
 [`ft_memmove.c`](https://github.com/vinicius-f-pereira/42_libft/blob/main/ft_memmove.c) | The memmove() function copies n bytes from memory area src to memory area dest. `The memory areas may overlap:` copying takes place as though the bytes in src are first copied into a temporary array that does not overlap src or dest, and the bytes are then copied from the temporary array to dest.
+[`ft_strlcpy.c`](https://github.com/vinicius-f-pereira/42_libft/blob/main/ft_strlcpy.c) | The strlcpy() function copy a string. This function are designed to be safer, more consistent, and less error prone replacements for strncpy(3). Strlcpy take the full size of the buffer (not just the lenght) and guarantee to NUL-terminate the result.
+
 
 ### Header file
 [`libft.h`](https://github.com/vinicius-f-pereira/42_libft/blob/main/libft.h)
