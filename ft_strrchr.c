@@ -6,13 +6,13 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 16:49:00 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/25 22:26:41 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/26 22:39:18 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	index;
 

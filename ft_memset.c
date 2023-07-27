@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 23:56:15 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/23 01:19:51 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/27 10:31:09 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	str = (unsigned char *)s;
 	chr = (unsigned char)c;
-	if (!str)
-		return (NULL);
-	while (--n)
-		*(str + n) = chr;
+	while (n)
+		*(str + --n) = chr;
 	return (s);
 }
