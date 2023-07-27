@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 14:18:58 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/27 10:20:12 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/27 16:33:00 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	sign;
-	int	nb;
+	int		nb;
+	int		sign;
+	char	*string;
 
-	sign = 0;
-	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
-		nptr++;
-	while (*nptr == '-' || *nptr == '+')
+	sign = 1;
+	string = (char *)nptr;
+	while ((*string >= 9 && *string <= 13) || *string == 32)
+		string++;
+	while (*string == '-' || *string == '+')
 	{
-		sign += 1;
-		if (sign > 1)
+		if (*(string + 1) == '-' || *(string + 1) == '+')
 			return (0);
-		if (*nptr == '-')
-			sign = -sign;
-		nptr++;
+		if (*string == '-')
+			sign = -1;
+		string++;
 	}
 	nb = 0;
-	while (*nptr >= '0' && *nptr <= '9')
+	while (*string >= '0' && *string <= '9')
 	{
 		nb *= 10;
-		nb += *nptr - 48;
-		nptr++;
+		nb += *string - 48;
+		string++;
 	}
-	nb *= sign;
-	return (nb);
+	return (nb *= sign);
 }
