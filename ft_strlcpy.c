@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 11:07:26 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/24 12:06:13 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/27 19:17:14 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	int	i;
 
-	if (!src)
-		return (0);
 	if (!size)
 		return (ft_strlen(src));
 	i = -1;
