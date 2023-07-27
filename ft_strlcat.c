@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 15:04:01 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/26 22:48:35 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/27 10:50:43 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	dest_len;
+	size_t	src_len;
+	int		i;
 
-	if (!src)
-		return (ft_strlen(dst));
-	if (!dst)
-		return (ft_strlen(src));
-	i = -1;
-	while (*(src + ++i) && (ft_strlen(dst) + i + 1) < size--)
-		*(dst + ft_strlen(dst) + 1) = *(src + i);
-	*(dst + ft_strlen(dst) + i) = '\0';
-	if (size < ft_strlen(dst))
-		return (ft_strlen(src) + size);
+	dest_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	i = 0;
+	while (src[i] && dest_len + i + 1 < size)
+	{
+		dst[dest_len + i] = src[i];
+		i++;
+	}
+	dst[dest_len + i] = '\0';
+	if (size < dest_len)
+		return (src_len + size);
 	else
-		return (ft_strlen(src) + ft_strlen(dst));
+		return (src_len + dest_len);
 }
