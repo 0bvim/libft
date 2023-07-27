@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 23:10:50 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/26 00:08:46 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/27 18:49:28 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strdup(const char *s)
 	int		len;
 	char	*dup;
 
-	len = ft_strlen((char *)s + 1);
-	while (s[len])
-		len++;
-	dup = (char *)malloc(sizeof(char) * len);
+	len = ft_strlen(s);
+	dup = (char *)malloc(sizeof(char) * (len + 1));
+	if (!dup)
+		return (0);
 	i = 0;
 	while (i < len)
 	{
