@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/07/28 11:57:50 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/07/28 20:23:17 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,9 +37,7 @@ CFLAGS := -Wall -Wextra -Werror -I.
 all: $(NAME)
 	
 $(NAME): $(OBJFILES)
-	ar crs $(NAME) $(OBJFILES)
-$(OBJFILES): %.o : %.c
-	$(CC) -c $< -o $@ $(CFLAGS)
+	@ar -rcs $(NAME) $?
 
 clean:
 	rm -f $(OBJFILES)
