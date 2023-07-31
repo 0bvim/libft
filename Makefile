@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/07/30 19:53:49 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/07/31 08:08:37 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,11 @@ SRCFILES := ft_atoi.c \
 	    ft_memchr.c \
 	    ft_strnstr.c \
 	    ft_memcmp.c \
-	    ft_calloc.c
+	    ft_calloc.c \
+	    ft_putchar_fd.c
 OBJFILES := $(SRCFILES:%.c=%.o)
 CFLAGS := -Wall -Wextra -Werror -I.
+HEADER := libft.h
 
 all: $(NAME)
 	
