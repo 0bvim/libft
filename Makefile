@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/08/01 01:23:16 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/08/01 11:58:49 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ SRCFILES := ft_atoi.c \
 	    ft_putstr_fd.c \
 	    ft_putendl_fd.c \
 	    ft_putnbr_fd.c \
-	    ft_itoa.c
+	    ft_itoa.c \
+	    ft_substr.c
 OBJFILES := $(SRCFILES:%.c=%.o)
 CFLAGS := -Wall -Wextra -Werror -I.
 HEADER := libft.h
