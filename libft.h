@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/31 22:16:26 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/07/31 22:20:09 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *big, const char *little, size_t n);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
