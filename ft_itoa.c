@@ -6,33 +6,51 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 01:21:41 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/01 02:10:31 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/01 11:47:24 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	ft_feedback(int *count, int n)
 {
-	int		i;
+	if (n < 0)
+		return (*count += 1, -1);
+	return (1);
+}
+
+static char	*ft_str_len(unsigned int n, int *count)
+{
 	char	*str;
 
-	str = (char *)malloc(sizeof(char) * 11);
-	if (!str)
-		return (NULL);
-	i = 0;
-	if (n < 0)
+	if (n >= 10)
 	{
-		str[i++] = '-';
-		n *= -1;
+		*count += 1;
+		str = ft_str_len(n / 10, count);
 	}
-	if (n == 0)
-		str[i++] = 48;
-	while (n > 0)
-	{
-		str[i++] = (n % 10) + '0';
-		n /= 10;
-	}
-	str[i] = '\0';
+	else
+		str = (char *)ft_calloc(*count + 1, sizeof(char));
+	return (str);
+}
+
+static void	ft_recursive_itoa(unsigned int n, int count, char *str)
+{
+	if (n >= 10)
+		ft_recursive_itoa(n / 10, count -1, str);
+	str[count] = (n % 10) + '0';
+}
+
+char	*ft_itoa(int n)
+{
+	int		count;
+	int		signal;
+	char	*str;
+
+	count = 1;
+	signal = ft_feedback(&count, n);
+	str = ft_str_len(n * signal, &count);
+	if (signal == -1)
+		str[0] = '-';
+	ft_recursive_itoa(n * signal, count -1, str);
 	return (str);
 }
