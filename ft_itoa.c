@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 01:21:41 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/01 11:47:24 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/02 16:36:37 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ static char	*ft_str_len(unsigned int n, int *count)
 	}
 	else
 		str = (char *)ft_calloc(*count + 1, sizeof(char));
+	if (!str)
+		return (0);
 	return (str);
 }
 
