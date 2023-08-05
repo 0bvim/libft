@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/08/04 22:46:19 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/08/05 15:42:57 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ SRCFILES := ft_atoi.c \
 	    ft_substr.c \
 	    ft_strjoin.c \
 	    ft_strtrim.c \
-	    ft_split.c
+	    ft_split.c \
+	    ft_strmapi.c
 OBJFILES := $(SRCFILES:%.c=%.o)
 CFLAGS := -Wall -Wextra -Werror -g -I.
 HEADER := libft.h

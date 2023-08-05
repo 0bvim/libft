@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/02 22:17:06 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/05 15:43:10 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_isprint(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	**ft_split(char const *s, char c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
