@@ -1,3 +1,4 @@
+#!/bin/sh
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -6,12 +7,12 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/08/05 19:26:39 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/08/06 18:54:28 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := libft.a
-SRCFILES := ft_atoi.c \
+NAME = libft.a
+MANDATORY = ft_atoi.c \
 	    ft_isalnum.c \
 	    ft_isalpha.c \
 	    ft_isascii.c \
@@ -45,22 +46,44 @@ SRCFILES := ft_atoi.c \
 	    ft_split.c \
 	    ft_strmapi.c \
 	    ft_striteri.c
-OBJFILES := $(SRCFILES:%.c=%.o)
-CFLAGS := -Wall -Wextra -Werror -g -I.
-HEADER := libft.h
+
+BONUS = ft_lstnew.c \
+
+SRCS = $(MANDATORY)
+BSRCS = $(BONUS)
+
+OBJS = $(SRCS:.c=.o)
+BOBJS = $(BSRCS:.c=.o)
+
+GREEN := \033[32m
+CLEAR_COLOR := \033[0m
+
+PRINT = printf
+PRINT_DONE = $(PRINT) "$(GREEN)[-----'\!done!/'-----]$(CLEAR_COLOR)\n"
+PRINT_CLEANED = $(PRINT) "$(GREEN)[-----'\!cleaned!/'-----]$(CLEAR_COLOR)\n"
+
+CFLAGS = -Wall -Wextra -Werror -I.
+HEADER = libft.h
+
+ifdef WITH_BONUS
+	OBJS += $(BOBJS)
+endif
 
 all: $(NAME)
 	
-$(NAME): $(OBJFILES)
-	@ar -rcs $(NAME) $?
+$(NAME): $(OBJS)
+	@ar -rcs $(NAME) $(OBJS)
+	@$(PRINT_DONE)
+bonus:
+	@$(MAKE) WITH_BONUS=TRUE
 
 clean:
-	rm -f $(OBJFILES)
+	@rm -f $(OBJS) $(BOBJS)
+	@$(PRINT_CLEANED)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
-	@echo "Uma mensagem bonita aqui =D"
 
-.PHONY: clean fclean re all
+.PHONY: clean fclean re all bonus

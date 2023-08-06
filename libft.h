@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/06 03:11:02 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/06 18:29:25 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+
 /* Bonus TypeStruct */
 
 typedef struct s_list	t_list;
@@ -25,6 +26,10 @@ struct	s_list
 	void	*content;
 	t_list	*next;
 };
+
+/* Bonus Functions */
+
+t_list	*ft_lstnew(void *content);
 
 /* Mandatory Functions */
 int		ft_toupper(int c);
