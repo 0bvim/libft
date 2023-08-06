@@ -6,18 +6,27 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/05 19:32:31 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/06 03:11:02 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-// Std Libs Headers
+/* Std Libs Headers */
 # include <stdlib.h>
 # include <unistd.h>
 
-// Functions
+/* Bonus TypeStruct */
+
+typedef struct s_list	t_list;
+struct	s_list
+{
+	void	*content;
+	t_list	*next;
+};
+
+/* Mandatory Functions */
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
