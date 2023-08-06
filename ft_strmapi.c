@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 15:41:19 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/05 16:45:46 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/05 20:22:52 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	map_return = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	index = 0;
-	if (!map_return)
+	if (!map_return || !f)
 		return (NULL);
 	while (s[index] != '\0')
 	{
-		if (f)
-		{
-			map_return[index] = f(index, s[index]);
-			index++;
-		}
-		else
-			return (NULL);
+		map_return[index] = f(index, s[index]);
+		index++;
 	}
 	return (map_return);
 }

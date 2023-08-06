@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 19:44:39 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/04 22:54:14 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/05 23:00:48 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	alloc_mem(result, s, c);
 	fill_array(result, s, c);
+	*(result + words) = NULL;
 	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 01:21:41 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/02 16:36:37 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/05 21:20:09 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	*ft_itoa(int n)
 	count = 1;
 	signal = ft_feedback(&count, n);
 	str = ft_str_len(n * signal, &count);
+	if (!str)
+		return (NULL);
 	if (signal == -1)
 		str[0] = '-';
 	ft_recursive_itoa(n * signal, count -1, str);
