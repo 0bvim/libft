@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/06 18:29:25 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/07 17:14:47 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 /* Std Libs Headers */
 # include <stdlib.h>
 # include <unistd.h>
-
 
 /* Bonus TypeStruct */
 

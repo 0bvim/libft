@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 19:44:39 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/06 00:24:44 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/07 17:54:39 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ static int	count_word(const char *s, char c)
 			while (s[index] != c && s[index] != '\0')
 				index++;
 		}
-		index++;
+		else
+			index++;
 	}
 	return (words);
 }
@@ -74,7 +75,6 @@ static void	fill_array(char **result_array, const char *s, char c)
 				s++;
 				letters++;
 			}
-			result_array[word][letters] = '\0';
 			word++;
 			letters = 0;
 		}
