@@ -1,4 +1,3 @@
-#!/bin/sh
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -7,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/08/06 18:54:28 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/08/08 16:59:27 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,9 +60,10 @@ MANDATORY = ft_atoi.c \
 	    ft_strtrim.c \
 	    ft_split.c \
 	    ft_strmapi.c \
-	    ft_striteri.c
+	    ft_striteri.c \
 
-BONUS = ft_lstnew.c \
+BONUS = ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c
 
 #******************************************************************************#
 #				 MAKEFILE SETUP				       #
@@ -97,7 +97,7 @@ $(NAME): $(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
 	@$(PRINT_DONE)
 bonus:
-	@$(MAKE) WITH_BONUS=TRUE
+	@@make WITH_BONUS=TRUE
 
 clean:
 	@rm -f $(OBJS) $(BOBJS)
