@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/08/08 16:59:27 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/08/08 21:04:57 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,7 @@ $(NAME): $(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
 	@$(PRINT_DONE)
 bonus:
-	@@make WITH_BONUS=TRUE
+	@make WITH_BONUS=TRUE --no-print-directory
 
 clean:
 	@rm -f $(OBJS) $(BOBJS)
