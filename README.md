@@ -27,11 +27,17 @@
 | [`ft_split.c`](./ft_split.c)     | The array of new strings resulting from the split. NULL if the allocation fails.|
 | [`ft_strchr.c`](./ft_strchr.c)   | The strchr() function returns a pointer to the first occurrence of the character c in the string s.|
 | [`ft_strdup.c`](./ft_strdup.c)   | The strncmp() function  is similar, except it compares only the first (at most) n bytes of s1 and s2.|
+| [`ft_striteri.c`](./ft_striteri.c) | Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument. Each character is passed by address to ’f’ to be modified if necessary.
+| [`ft_strjoin.c`](./ft_strjoin.c) | Allocates (with malloc(3)) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.|
 | [`ft_strlcat.c`](./ft_strlcat.c) | The strlcat() function concatenate strings. And the explanation is the same of strlcpy function.|
 | [`ft_strlcpy.c`](./ft_strlcpy.c) | The strlcpy() function copy a string. This function are designed to be safer, more consistent, and less error prone replacements for strncpy(3). Strlcpy take the full size of the buffer (not just the lenght) and guarantee to NUL-terminate the result.|
 | [`ft_strlen.c`](./ft_strlen.c)   | Calculate the `length` of a string.|
+| [`ft_strmapi.c`](./ft_strmapi.c) | Applies the function ’f’ to each character of the string ’s’, and passing its index as first argument to create a new string (with malloc(3)) resulting from successive applications of ’f’.|
 | [`ft_strncmp.c`](./ft_strncmp.c) | The strncmp() function  is similar, except it compares only the first (at most) n bytes of s1 and s2.|
+| [`ft_strnstr.c`](./ft_strnstr.c) | The strnstr() function locates the first occurrence of the null-terminated string little in the string big, where not more than len characters are searched.|
 | [`ft_strrchr.c`](./ft_strrchr.c) | The strrchr() function returns a pointer to the last occurrence of the character c in the string s.|
+| [`ft_strtrim.c`](./ft_strtrim.c) | Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string.|
+| [`ft_tolower.c`](./ft_substr.c)  | Allocates (with malloc(3)) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.|
 | [`ft_tolower.c`](./ft_tolower.c) | Convert to lowercase.|
 | [`ft_toupper.c`](./ft_toupper.c) | Convert to uppercase.|
 
