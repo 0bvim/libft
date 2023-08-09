@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/08/08 21:04:57 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/08/09 00:03:19 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,8 @@ MANDATORY = ft_atoi.c \
 	    ft_striteri.c \
 
 BONUS = ft_lstnew_bonus.c \
-	ft_lstadd_front_bonus.c
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c
 
 #******************************************************************************#
 #				 MAKEFILE SETUP				       #
