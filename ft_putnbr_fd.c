@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 22:29:03 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/16 06:46:48 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/16 07:18:22 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*nbr;
+	long int	nb;
 
-	nbr = ft_itoa(n);
-	ft_putstr_fd(nbr, fd);
-	free(nbr);
+	nb = n;
+	if (nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
+	}
+	else
+		ft_putchar_fd(nb + '0', fd);
 }
