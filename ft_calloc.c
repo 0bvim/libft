@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/30 19:52:09 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/30 20:04:03 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/16 12:28:36 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	int		result;
+	size_t		result;
 
 	ptr = NULL;
 	result = nmemb * size;
