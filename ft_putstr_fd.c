@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 22:15:28 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/05 21:48:21 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/08/16 06:52:39 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	count;
-
-	count = 0;
-	if (!s)
-		return ;
-	while (s[count] != '\0')
-	{
-		ft_putchar_fd(s[count], fd);
-		count++;
-	}
+	write (fd, s, ft_strlen(s));
 }
