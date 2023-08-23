@@ -1,10 +1,9 @@
 <div align='center'>
   
 # `Libft`
-![Libft](https://game.42sp.org.br/static/assets/achievements/libftn.png)
+![Libft](../../../42-project-badges/blob/main/badges/libftm.png)
 ## This is a project that I need to make my own lib replying function of `C`.
 ## Concatenating with header file `(.h)` and using Makefile to compile lib.
-
 </div>
 
 ### implemented functions so far:
