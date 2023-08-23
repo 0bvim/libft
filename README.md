@@ -1,9 +1,9 @@
+![libft](../../../42-project-badges/blob/main/covers/cover-libft-bonus.png)
+
 <div align='center'>
   
-# `Libft`
-![Libft](../../../42-project-badges/blob/main/badges/libftm.png)
-## This is a project that I need to make my own lib replying function of `C`.
-## Concatenating with header file `(.h)` and using Makefile to compile lib.
+## This is a project that I need to make my own lib replying function of `C` lib.
+## Concatenating with header file `(.h)` and using Makefile to compile a statib lib.
 </div>
 
 ### implemented functions so far:
