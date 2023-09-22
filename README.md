@@ -40,6 +40,10 @@
 | [`ft_tolower.c`](./ft_tolower.c) | Convert to lowercase.|
 | [`ft_toupper.c`](./ft_toupper.c) | Convert to uppercase.|
 
+#
+
+## Bonus
+| Functions                        | Details                                                                                                                                                                                                                                                                                                |
 
 ### Header file
 [`libft.h`](./libft.h)
