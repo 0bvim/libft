@@ -36,8 +36,7 @@
 | [`ft_strnstr.c`](./ft_strnstr.c) | The strnstr() function locates the first occurrence of the null-terminated string little in the string big, where not more than len characters are searched.|
 | [`ft_strrchr.c`](./ft_strrchr.c) | The strrchr() function returns a pointer to the last occurrence of the character c in the string s.|
 | [`ft_strtrim.c`](./ft_strtrim.c) | Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string.|
-| [`ft_substr.c`](./ft_substr.c) | Allocates (with malloc(3)) and returns a substring from the string ’s’.
-The substring begins at index ’start’ and is of maximum size ’len’.|
+| [`ft_substr.c`](./ft_substr.c) | Allocates (with malloc(3)) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.|
 | [`ft_tolower.c`](./ft_tolower.c) | Convert to lowercase.|
 | [`ft_toupper.c`](./ft_toupper.c) | Convert to uppercase.|
 
