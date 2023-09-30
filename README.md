@@ -53,8 +53,9 @@
 | [`ft_lstiter.c`](./ft_lstiter.c) | Iterates the list ’lst’ and applies the function ’f’ on the content of each node.|
 | [`ft_lstmap.c`](./ft_lstmap.c) | Iterates the list ’lst’ and applies the function ’f’ on the content of each node. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of a node if needed.|
 
-### Header file
-[`libft.h`](./libft.h)
+### Header and Makefile
+| Files                        | Details                                                                                                                                                                                                                                                                                                |
+|----------------------------------|--------------------------------------------|
+| [`libft.h`](./libft.h) | This header handle both, mandatory and bonus part.|
+| [`Makefile`](./Makefile) | Makefile to make bonus and mandatory part.|
 
-### Make
-[`Makefile`](./Makefile)
