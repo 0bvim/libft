@@ -36,14 +36,23 @@
 | [`ft_strnstr.c`](./ft_strnstr.c) | The strnstr() function locates the first occurrence of the null-terminated string little in the string big, where not more than len characters are searched.|
 | [`ft_strrchr.c`](./ft_strrchr.c) | The strrchr() function returns a pointer to the last occurrence of the character c in the string s.|
 | [`ft_strtrim.c`](./ft_strtrim.c) | Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string.|
-| [`ft_tolower.c`](./ft_substr.c)  | Allocates (with malloc(3)) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.|
+| [`ft_substr.c`](./ft_substr.c) | Allocates (with malloc(3)) and returns a substring from the string ’s’.
+The substring begins at index ’start’ and is of maximum size ’len’.|
 | [`ft_tolower.c`](./ft_tolower.c) | Convert to lowercase.|
 | [`ft_toupper.c`](./ft_toupper.c) | Convert to uppercase.|
 
-#
-
-## Bonus
+### Bonus
 | Functions                        | Details                                                                                                                                                                                                                                                                                                |
+|----------------------------------|--------------------------------------------|
+| [`ft_lstnew.c`](./ft_lstnew.c) | Allocates (with malloc(3)) and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.|
+| [`ft_lstadd_front.c`](./ft_lstadd_front.c) | Adds the node ’new’ at the beginning of the list.|
+| [`ft_lstsize.c`](./ft_lstsize.c) | Counts the number of nodes in a list.|
+| [`ft_lstlast.c`](./ft_lstlast.c) | Returns the last node of the list.|
+| [`ft_lstadd_back.c`](./ft_lstadd_back.c) | Adds the node ’new’ at the end of the list.|
+| [`ft_lstdelone.c`](./ft_lstdelone.c) | Takes as a parameter a node and frees the memory of the node’s content using the function ’del’ given as a parameter and free the node. The memory of ’next’ must not be freed.|
+| [`ft_lstclear.c`](./ft_lstclear.c) | Deletes and frees the given node and every successor of that node, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.|
+| [`ft_lstiter.c`](./ft_lstiter.c) | Iterates the list ’lst’ and applies the function ’f’ on the content of each node.|
+| [`ft_lstmap.c`](./ft_lstmap.c) | Iterates the list ’lst’ and applies the function ’f’ on the content of each node. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of a node if needed.|
 
 ### Header file
 [`libft.h`](./libft.h)
