@@ -59,3 +59,44 @@
 | [`libft.h`](./libft.h) | This header handle both, mandatory and bonus part.|
 | [`Makefile`](./Makefile) | Makefile to make bonus and mandatory part.|
 
+
+## HOW USE IT?
+> Following command are in terminal. (`$`) \
+> First, clone repository with your the way you prefer
+```bash
+gh repo clone vinicius-f-pereira/42_libft
+```
+`or`
+```
+git clone git@github.com:vinicius-f-pereira/42_libft.git
+```
+`or`
+```
+git clone https://github.com/vinicius-f-pereira/42_libft.git
+```
+### Now you need to build libftprintf.a
+```bash
+cd 42_libft
+make
+```
+
+### You need of a `main.c` file with path do header and compile it with static library
+> The recipe to compile executable
+```bash
+cc main.c libft.a -Iincludes -o libft
+./libft
+```
+
+> Here's a boilerplate of a `main.c`
+```c
+#include "libft.h"
+
+int  main(void)
+{
+  int  letters = ft_strlen("Hello");
+  ft_putnbr_fd(letters, STDOUT_FILENO);
+  ft_putchar_fd('\n', STDOUT_FILENO);
+  ft_putstr_fd("Hello\n", STDOUT_FILENO);
+  return (0); 
+}
+```
