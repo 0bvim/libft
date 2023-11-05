@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 19:44:39 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/07 17:54:39 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/04 14:17:07 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	alloc_mem(char **split_array, char const *s, char c)
 				letters++;
 				s++;
 			}
-			split_array[index] = (char *)ft_calloc(letters + 1, sizeof(char));
+			split_array[index] = ft_calloc((letters + 1), sizeof(char));
 			index++;
 			letters = 0;
 		}
@@ -89,7 +89,7 @@ char	**ft_split(char const *s, char c)
 	int		words;
 
 	words = count_word(s, c);
-	result = (char **)ft_calloc(words + 1, sizeof(char *));
+	result = ft_calloc((words + 1), sizeof(char *));
 	if (!s || !result)
 		return (NULL);
 	alloc_mem(result, s, c);
