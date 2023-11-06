@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/10/16 18:15:56 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/11/05 20:58:27 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ CFILES = ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprin
 	ft_memcmp.c ft_calloc.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 	ft_putnbr_fd.c ft_itoa.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
 	ft_strmapi.c ft_striteri.c ft_lstnew.c  ft_lstadd_front.c ft_lstsize.c \
-	ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+	ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+	ft_lstmap.c ft_free_split.c
 
 OBJECT =  $(patsubst %, $(OBJ)/%, $(notdir $(CFILES:.c=.o)))
 
