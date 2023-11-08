@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/05 21:00:44 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:35:24 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(const char *s1, const char *set);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *str, int c);

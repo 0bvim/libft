@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 17:06:02 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/01 18:02:31 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:35:12 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char const *s2)
 {
 	size_t	len;
 	size_t	mark;
@@ -34,5 +34,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		new_str[mark++] = s2[count++];
 	}
+	free(s1);
 	return (new_str);
 }
