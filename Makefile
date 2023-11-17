@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/11/05 20:58:27 by vde-frei         ###   ########.fr        #
+#    Updated: 2023/11/17 01:25:49 by nivicius         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ LIBNAME = libft
 BLIBNAME =
 COMP = Compiling
 
-DFLAGS = -Wall -Wextra -Werror -g3 # TO DEBBUG
+DFLAGS = -Wall -Wextra -Werror -g3 # TO debug
 CFLAGS = -Wall -Werror -Wextra -O3 -fomit-frame-pointer -finline-functions # TO IMPROVE PERFORMANCE
 ARFLAGS = rcs
 
@@ -57,38 +57,70 @@ CFILES = ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprin
 
 OBJECT =  $(patsubst %, $(OBJ)/%, $(notdir $(CFILES:.c=.o)))
 
-ifdef WITH_DEBBUG
+ifdef WITH_DEBUG
 	CFLAGS = $(DFLAGS)
 endif
+
+define pre_re
+	fclean all
+endef
+
+define compile_c_to_o
+	@$(eval COUNT=$(shell expr $(COUNT) + 1))
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@printf "$(GREEN)$(LIBNAME) $(COMP) %d%%\r$(RESET)" $$(echo $$(($(COUNT) * 100 / $(words $(CFILES)))))
+endef
+
+define compile_o_to_a
+	@$(AR) $(ARFLAGS) $@ $?
+	@$(SLEEP)
+	@printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
+endef
+
+define clean_files
+	@$(RM) -rf $(OBJ)
+	@$(SLEEP)
+	@printf "$(RED)$(CLEAN)$(RESET)\n"
+endef
+
+define clean_lib
+	@$(RM) $(NAME) && $(RM) -rf $(OBJ)
+	@$(SLEEP)
+	@printf "$(RED)$(FCLEAN)$(RESET)\n"
+endef
+
+define help
+	@echo -e "$(GREEN)Available targets:$(RESET)"
+	@echo -e "$(CYAN)all:$(RESET) $(YELLOW)Build the library$(RESET)"
+	@echo -e "$(CYAN)clean:$(RESET) $(RED)Remove the object files$(RESET)"
+	@echo -e "$(CYAN)fclean:$(RESET) $(RED)Remove the library and the object files$(RESET)"
+	@echo -e "$(CYAN)re:$(RESET) $(YELLOW)Rebuild the library$(RESET)"
+	@echo -e "$(CYAN)debug:$(RESET) $(WHITE)Build the program with debugging information$(RESET)"
+endef
 
 all: $(OBJ) $(NAME)
 
 $(NAME): $(OBJECT)
-	@$(AR) $(ARFLAGS) $@ $?
-	@$(SLEEP)
-	@printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
+	$(compile_o_to_a)
 
 $(OBJ):
 	@mkdir -p $(OBJ)
 
 $(OBJ)/%.o: $(SRC)/%.c
-	@$(eval COUNT=$(shell expr $(COUNT) + 1))
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-	@printf "$(GREEN)$(LIBNAME) $(COMP) %d%%\r$(RESET)" $$(echo $$(($(COUNT) * 100 / $(words $(CFILES)))))
+	$(compile_c_to_o)
 
 clean:
-	@$(RM) -rf $(OBJ)
-	@$(SLEEP)
-	@printf "$(RED)$(CLEAN)$(RESET)\n"
+	$(clean_files)
 
 fclean: clean
-	@$(RM) $(NAME)
-	@$(SLEEP)
-	@printf "$(RED)$(FCLEAN)$(RESET)\n"
+	$(clean_lib)
 
-re: fclean all
+re: $(call pre_re)
 
-debbug:
-	@make WITH_DEBBUG=TRUE --no-print-directory
+debug:
+	@make WITH_DEBUG=TRUE -s
 
-.PHONY: all clean fclean re debbug
+help:
+	$(help)
+.PHONY: all clean fclean re debug help Makefile
+
