@@ -6,7 +6,7 @@
 #    By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/11/17 01:25:49 by nivicius         ###   ########.fr        #
+#    Updated: 2023/11/17 01:28:02 by nivicius         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ BLIBNAME =
 COMP = Compiling
 
 DFLAGS = -Wall -Wextra -Werror -g3 # TO debug
-CFLAGS = -Wall -Werror -Wextra -O3 -fomit-frame-pointer -finline-functions # TO IMPROVE PERFORMANCE
+CFLAGS = -Wall -Werror -Wextra -g3 -Ofast
 ARFLAGS = rcs
 
 SRC = src
