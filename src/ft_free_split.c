@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 15:10:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/04 23:23:23 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/07 02:15:21 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ void	ft_free_split(char **split)
 
 	i = 0;
 	while (split[i])
-	{
-		free(split[i]);
-		i++;
-	}
+		free(split[i++]);
 	free(split);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 20:38:27 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/26 22:38:50 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/07 02:18:55 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	if (!(c < 32 || c > 126))
-		return (1);
-	return (0);
+	return (!(c < 32 || c > 126));
 }

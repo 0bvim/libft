@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 17:06:02 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/08 15:01:31 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/07 02:25:12 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,17 @@
 
 char	*ft_strjoin(char *s1, char const *s2)
 {
-	size_t	len;
-	size_t	mark;
-	size_t	count;
+	size_t	len1;
+	size_t	len2;
 	char	*new_str;
 
-	len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	mark = 0;
-	count = 0;
-	new_str = (char *)ft_calloc(len, sizeof(char));
-	if (!new_str)
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	new_str = (char *)ft_calloc((len1 + len2 + 1), sizeof(char));
+	if (!new_str || !s1)
 		return (NULL);
-	while (s1[mark] != '\0')
-	{
-		new_str[mark++] = s1[count++];
-	}
-	count = 0;
-	while (s2[count] != '\0' && ft_strlen(s2))
-	{
-		new_str[mark++] = s2[count++];
-	}
-	free(s1);
+	ft_strlcpy(new_str, (char *)s1, len1 + 1);
+	ft_strlcat(new_str, (char *)s2, len2 + len1 + 1);
+	new_str[len1 + len2] = '\0';
 	return (new_str);
 }

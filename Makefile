@@ -6,7 +6,7 @@
 #    By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/11/17 01:28:02 by nivicius         ###   ########.fr        #
+#    Updated: 2023/12/07 02:14:20 by nivicius         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,4 +123,4 @@ debug:
 help:
 	$(help)
 .PHONY: all clean fclean re debug help Makefile
-
+.DEFAULT_GOAL := all
