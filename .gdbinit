@@ -1,5 +1,4 @@
 define vars_main
-	disp n
 	disp count
 	disp signal
 	disp str
