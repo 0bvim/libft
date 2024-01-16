@@ -19,7 +19,6 @@ void	free_content(char **splited, int count)
 	free_content(splited + 1, ++count);
 	free(*splited);
 	*splited = NULL;
-	--count;
-	if (splited && count == 1)
+	if (splited && --count == 1)
 		free(splited);
 }
