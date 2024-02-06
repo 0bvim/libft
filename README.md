@@ -6,6 +6,8 @@
 ## Concatenating with header file `(.h)` and using Makefile to compile a statib lib.
 </div>
 
+`refactoring libft. Changing some functions and adding others.`
+
 ### implemented functions so far:
 | Functions                        | Details                                                                                                                                                                                                                                                                                                |
 |----------------------------------|--------------------------------------------|
