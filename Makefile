@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+         #
+#    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2023/12/07 02:14:20 by nivicius         ###   ########.fr        #
+#    Updated: 2024/03/03 04:09:52 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ COMP = Compiling
 
 DFLAGS = -Wall -Wextra -Werror -g3 # TO debug
 CFLAGS = -Wall -Werror -Wextra -g3 -Ofast
+CCPFLAGS = -I./includes/ -I./src/bool/
 ARFLAGS = rcs
 
 SRC = src
@@ -67,7 +68,7 @@ endef
 
 define compile_c_to_o
 	@$(eval COUNT=$(shell expr $(COUNT) + 1))
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) $(CCPFLAGS) $(INCLUDES) -c $< -o $@
 	@printf "$(GREEN)$(LIBNAME) $(COMP) %d%%\r$(RESET)" $$(echo $$(($(COUNT) * 100 / $(words $(CFILES)))))
 endef
 
