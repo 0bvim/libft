@@ -6,13 +6,13 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 04:08:18 by vde-frei          #+#    #+#             */
-/*   Updated: 2024/03/03 04:12:34 by vde-frei         ###   ########.fr       */
+/*   Updated: 2024/03/03 04:16:07 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <bool.h>
 
-bool	ft_isalpha(int c)
+bool	ft_isspace(int c)
 {
 	return (32 == c || (c >= 9 && c <= 13));
 }
