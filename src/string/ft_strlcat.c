@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 14:44:21 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/15 14:50:37 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/24 15:04:01 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:27:06 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	t_list	*result;
-	t_list	**aux;
+	size_t	dest_len;
+	size_t	src_len;
+	int		i;
 
-	(void)del;
-	if (lst == NULL)
-		return (NULL);
-	result = ft_lstnew(f(lst->content));
-	aux = &result;
-	lst = lst->next;
-	while (lst != NULL)
+	dest_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	i = 0;
+	while (src[i] && dest_len + i + 1 < size)
 	{
-		ft_lstadd_back(aux, ft_lstnew(f(lst->content)));
-		lst = lst->next;
+		dst[dest_len + i] = src[i];
+		i++;
 	}
-	return (result);
+	dst[dest_len + i] = '\0';
+	if (size < dest_len)
+		return (src_len + size);
+	else
+		return (src_len + dest_len);
 }

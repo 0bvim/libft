@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 15:41:19 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/07 02:20:18 by nivicius         ###   ########.fr       */
+/*   Created: 2023/08/01 17:06:02 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:26:55 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
+#include "../mem/ft_memory.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strjoin(char *s1, char const *s2)
 {
-	char	*map_return;
-	int		index;
+	size_t	len1;
+	size_t	len2;
+	char	*new_str;
 
-	map_return = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
-	index = 0;
-	if (!map_return || !f)
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	new_str = (char *)ft_calloc((len1 + len2 + 1), sizeof(char));
+	if (!new_str || !s1)
 		return (NULL);
-	while (s[index] != '\0')
-	{
-		map_return[index] = f(index, s[index]);
-		index++;
-	}
-	return (map_return);
+	ft_strlcpy(new_str, (char *)s1, len1 + 1);
+	ft_strlcat(new_str, (char *)s2, len2 + len1 + 1);
+	new_str[len1 + len2] = '\0';
+	return (new_str);
 }

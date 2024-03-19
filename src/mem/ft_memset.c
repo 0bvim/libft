@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/30 19:52:09 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/24 17:21:58 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/22 23:56:15 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:24:05 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	void	*ptr;
-	size_t	result;
+	unsigned char	*str;
+	unsigned char	chr;
 
-	ptr = NULL;
-	result = nmemb * size;
-	if (!nmemb || !size || nmemb == result / size)
-		ptr = malloc (result);
-	if (ptr)
-		ft_bzero(ptr, result);
-	return (ptr);
+	str = (unsigned char *)s;
+	chr = (unsigned char)c;
+	while (n)
+		*(str + --n) = chr;
+	return (s);
 }

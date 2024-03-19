@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 19:33:08 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/05 20:15:23 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/08/05 15:41:19 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:27:43 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
+#include "../mem/ft_memory.h"
 
-void	*ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	index;
+	char	*map_return;
+	int		index;
 
+	map_return = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	index = 0;
-	if (!s || !f)
+	if (!map_return || !f)
 		return (NULL);
 	while (s[index] != '\0')
 	{
-		f(index, &s[index]);
+		map_return[index] = f(index, s[index]);
 		index++;
 	}
-	return (NULL);
+	return (map_return);
 }

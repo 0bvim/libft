@@ -6,11 +6,12 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 11:56:48 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/01 12:31:37 by vde-frei         ###   ########.fr       */
+/*   Updated: 2024/03/18 22:28:49 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
+#include "../mem/ft_memory.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

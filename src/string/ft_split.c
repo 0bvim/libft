@@ -6,11 +6,12 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 19:44:39 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/04 14:17:07 by vde-frei         ###   ########.fr       */
+/*   Updated: 2024/03/18 22:25:34 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
+#include "../mem/ft_memory.h"
 
 static void	alloc_mem(char **split_array, char const *s, char c)
 {

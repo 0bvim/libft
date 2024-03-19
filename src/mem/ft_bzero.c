@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 18:01:17 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/07 02:17:41 by nivicius         ###   ########.fr       */
+/*   Created: 2023/07/23 15:01:35 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:24:13 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
-int	ft_isalnum(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	ft_memset(s, '\0', n);
 }

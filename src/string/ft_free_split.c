@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 14:12:31 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/15 14:37:00 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/11/04 15:10:38 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:24:30 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_free_split(char **split)
 {
-	if (lst && del)
-	{
-		(*del)(lst->content);
-		free(lst);
-	}
+	int	i;
+
+	i = 0;
+	while (split[i])
+		free(split[i++]);
+	free(split);
 }

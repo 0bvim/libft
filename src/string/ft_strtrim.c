@@ -6,11 +6,11 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 10:36:15 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/02 17:29:01 by vde-frei         ###   ########.fr       */
+/*   Updated: 2024/03/18 22:28:21 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 size_t	ft_end(char const *s1, char const *set, size_t len)
 {
