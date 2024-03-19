@@ -6,11 +6,12 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 01:21:41 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/16 06:57:34 by vde-frei         ###   ########.fr       */
+/*   Updated: 2024/03/18 22:25:25 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
+#include "../mem/ft_memory.h"
 
 static int	ft_feedback(int *count, int n)
 {

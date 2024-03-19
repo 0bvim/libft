@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 11:41:18 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/28 12:30:35 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/24 18:36:40 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:27:51 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	letter;
-	unsigned char	*string;
-	size_t			index;
+	size_t	index;
 
-	letter = (unsigned char)c;
-	string = (unsigned char *)s;
 	index = 0;
-	while (n--)
+	if (n != 0)
 	{
-		if (string[index] == letter)
-			return (string + index);
-		index++;
+		while (s1[index] && (s1[index] == s2[index]) && index < n - 1)
+			index++;
+		return ((unsigned char)s1[index] - (unsigned char)s2[index]);
 	}
-	return (NULL);
+	return (0);
 }

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 00:12:47 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/09 00:17:27 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/24 11:07:26 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:27:15 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
-t_list	*ft_lstlast(t_list *lst)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (lst)
+	int	i;
+
+	if (!size)
+		return (ft_strlen(src));
+	i = -1;
+	while (*(src + ++i) && --size)
 	{
-		while (lst->next)
-			lst = lst->next;
+		*(dst + i) = *(src + i);
 	}
-	return (lst);
+	*(dst + i) = '\0';
+	return (ft_strlen(src));
 }

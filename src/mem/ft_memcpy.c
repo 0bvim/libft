@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/30 19:52:09 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/24 17:21:58 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/23 17:34:37 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:24:10 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	void	*ptr;
-	size_t	result;
+	char	*cpysrc;
+	char	*cpydest;
+	size_t	i;
 
-	ptr = NULL;
-	result = nmemb * size;
-	if (!nmemb || !size || nmemb == result / size)
-		ptr = malloc (result);
-	if (ptr)
-		ft_bzero(ptr, result);
-	return (ptr);
+	if (!dest && !src)
+		return (NULL);
+	cpysrc = (char *)src;
+	cpydest = (char *)dest;
+	i = 0;
+	while (i < n)
+	{
+		*(cpydest + i) = *(cpysrc + i);
+		i++;
+	}
+	return (dest);
 }

@@ -6,11 +6,12 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 17:06:02 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/07 02:25:12 by nivicius         ###   ########.fr       */
+/*   Updated: 2024/03/18 22:26:55 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
+#include "../mem/ft_memory.h"
 
 char	*ft_strjoin(char *s1, char const *s2)
 {

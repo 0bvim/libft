@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/06 18:27:29 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/13 04:51:26 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/28 11:41:18 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:24:11 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
-t_list	*ft_lstnew(void *content)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_list	*new;
+	unsigned char	letter;
+	unsigned char	*string;
+	size_t			index;
 
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	letter = (unsigned char)c;
+	string = (unsigned char *)s;
+	index = 0;
+	while (n--)
+	{
+		if (string[index] == letter)
+			return (string + index);
+		index++;
+	}
+	return (NULL);
 }

@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 14:29:18 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/08/15 14:31:42 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/25 16:49:00 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:28:04 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+char	*ft_strrchr(const char *s, int c)
 {
-	while (lst != NULL)
+	int				index;
+	unsigned char	*string;
+
+	string = (unsigned char *)s;
+	index = ft_strlen(s);
+	while (index)
 	{
-		f(lst->content);
-		lst = lst->next;
+		if (string[index] == (unsigned char)c)
+			return ((char *)(string + index));
+		--index;
 	}
+	if (string[index] == (unsigned char)c)
+		return ((char *)(string + index));
+	return (NULL);
 }

@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 16:49:00 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/07/27 11:32:06 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/07/30 19:16:57 by vde-frei          #+#    #+#             */
+/*   Updated: 2024/03/18 22:23:27 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int				index;
-	unsigned char	*string;
+	size_t	i;
 
-	string = (unsigned char *)s;
-	index = ft_strlen(s);
-	while (index)
+	i = 0;
+	while (i < n)
 	{
-		if (string[index] == (unsigned char)c)
-			return ((char *)(string + index));
-		--index;
+		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
+			return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
+		i++;
 	}
-	if (string[index] == (unsigned char)c)
-		return ((char *)(string + index));
-	return (NULL);
+	return (0);
 }
