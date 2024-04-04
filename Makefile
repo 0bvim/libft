@@ -6,7 +6,7 @@
 #    By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
-#    Updated: 2024/03/20 11:09:14 by vde-frei         ###   ########.fr        #
+#    Updated: 2024/04/04 16:22:53 by vde-frei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,8 @@ $(NAME): $(OBJECT)
 $(OBJ):
 	@mkdir -p $(OBJ)
 
-$(OBJ)/%.o: $(SRC)/%.c
+$(OBJ)/%.o: %.c
+	@mkdir -p $(OBJ)
 	$(compile_c_to_o)
 
 clean:
