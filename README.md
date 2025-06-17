@@ -66,19 +66,20 @@
 > Following command are in terminal. (`$`) \
 > First, clone repository with your the way you prefer
 ```bash
-gh repo clone vinicius-f-pereira/42_libft
+gh repo clone 0bvim/libft
 ```
 `or`
 ```
-git clone git@github.com:vinicius-f-pereira/42_libft.git
+git clone git@github.com:0bvim/libft.git
 ```
 `or`
 ```
-git clone https://github.com/vinicius-f-pereira/42_libft.git
+git clone https://github.com/0bvim/libft.git
 ```
+
 ### Now you need to build libftprintf.a
 ```bash
-cd 42_libft
+cd libft
 make
 ```
 
